@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonCopyPgn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonCopyFEN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // kenChessUserControl1
@@ -64,7 +65,7 @@
             // 
             // textBoxGameDatabaseName
             // 
-            this.textBoxGameDatabaseName.Location = new System.Drawing.Point(125, 21);
+            this.textBoxGameDatabaseName.Location = new System.Drawing.Point(124, 15);
             this.textBoxGameDatabaseName.Name = "textBoxGameDatabaseName";
             this.textBoxGameDatabaseName.ReadOnly = true;
             this.textBoxGameDatabaseName.Size = new System.Drawing.Size(481, 20);
@@ -73,7 +74,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 25);
+            this.label3.Location = new System.Drawing.Point(33, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 43;
@@ -81,7 +82,7 @@
             // 
             // textBoxGameNumber
             // 
-            this.textBoxGameNumber.Location = new System.Drawing.Point(125, 47);
+            this.textBoxGameNumber.Location = new System.Drawing.Point(124, 41);
             this.textBoxGameNumber.Name = "textBoxGameNumber";
             this.textBoxGameNumber.ReadOnly = true;
             this.textBoxGameNumber.Size = new System.Drawing.Size(75, 20);
@@ -90,7 +91,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 50);
+            this.label2.Location = new System.Drawing.Point(42, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 41;
@@ -98,7 +99,7 @@
             // 
             // buttonCopyPgn
             // 
-            this.buttonCopyPgn.Location = new System.Drawing.Point(1060, 20);
+            this.buttonCopyPgn.Location = new System.Drawing.Point(1059, 14);
             this.buttonCopyPgn.Name = "buttonCopyPgn";
             this.buttonCopyPgn.Size = new System.Drawing.Size(75, 23);
             this.buttonCopyPgn.TabIndex = 45;
@@ -111,17 +112,28 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(612, 23);
+            this.label1.Location = new System.Drawing.Point(611, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(442, 16);
             this.label1.TabIndex = 46;
             this.label1.Text = "This game cannot be eited; use \'Clone game\' to create an editable game.";
+            // 
+            // buttonCopyFEN
+            // 
+            this.buttonCopyFEN.Location = new System.Drawing.Point(1059, 44);
+            this.buttonCopyFEN.Name = "buttonCopyFEN";
+            this.buttonCopyFEN.Size = new System.Drawing.Size(75, 23);
+            this.buttonCopyFEN.TabIndex = 47;
+            this.buttonCopyFEN.Text = "Copy FEN";
+            this.buttonCopyFEN.UseVisualStyleBackColor = true;
+            this.buttonCopyFEN.Click += new System.EventHandler(this.buttonCopyFEN_Click);
             // 
             // FormViewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 781);
+            this.Controls.Add(this.buttonCopyFEN);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCopyPgn);
             this.Controls.Add(this.textBoxGameDatabaseName);
@@ -145,5 +157,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonCopyPgn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonCopyFEN;
     }
 }

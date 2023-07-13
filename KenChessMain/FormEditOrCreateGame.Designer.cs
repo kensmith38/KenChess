@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            KenChessBoardView.DragChessPiece dragChessPiece1 = new KenChessBoardView.DragChessPiece();
+            KenChessBoardView.DragChessPiece dragChessPiece2 = new KenChessBoardView.DragChessPiece();
             this.labelGameFile = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kenChessUserControl1 = new KenChessBoardView.KenChessUserControl();
+            this.buttonCopyFEN = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,13 +87,13 @@
             this.kenChessUserControl1.AnimatedChessPiece = null;
             this.kenChessUserControl1.DarkSquareColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(148)))), ((int)(((byte)(186)))));
             this.kenChessUserControl1.DarkSquareHighlightColor = System.Drawing.Color.LightSkyBlue;
-            dragChessPiece1.DestinationChessSquare = null;
-            dragChessPiece1.DragInProgess = false;
-            dragChessPiece1.OriginChessSquare = null;
-            dragChessPiece1.PieceBeingDragged = null;
-            dragChessPiece1.XOffsetFromTopLeft = 0;
-            dragChessPiece1.YOffsetFromTopLeft = 0;
-            this.kenChessUserControl1.DragChessPiece = dragChessPiece1;
+            dragChessPiece2.DestinationChessSquare = null;
+            dragChessPiece2.DragInProgess = false;
+            dragChessPiece2.OriginChessSquare = null;
+            dragChessPiece2.PieceBeingDragged = null;
+            dragChessPiece2.XOffsetFromTopLeft = 0;
+            dragChessPiece2.YOffsetFromTopLeft = 0;
+            this.kenChessUserControl1.DragChessPiece = dragChessPiece2;
             this.kenChessUserControl1.FontForCoordinates = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.kenChessUserControl1.FontForPieces = new System.Drawing.Font("Microsoft Sans Serif", 34F);
             this.kenChessUserControl1.LightSquareColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
@@ -105,11 +106,22 @@
             this.kenChessUserControl1.UserCanMoveChessPieces = false;
             this.kenChessUserControl1.UserNavigationEnabled = true;
             // 
+            // buttonCopyFEN
+            // 
+            this.buttonCopyFEN.Location = new System.Drawing.Point(1066, 41);
+            this.buttonCopyFEN.Name = "buttonCopyFEN";
+            this.buttonCopyFEN.Size = new System.Drawing.Size(75, 23);
+            this.buttonCopyFEN.TabIndex = 48;
+            this.buttonCopyFEN.Text = "Copy FEN";
+            this.buttonCopyFEN.UseVisualStyleBackColor = true;
+            this.buttonCopyFEN.Click += new System.EventHandler(this.buttonCopyFEN_Click);
+            // 
             // FormEditOrCreateGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 781);
+            this.Controls.Add(this.buttonCopyFEN);
             this.Controls.Add(this.kenChessUserControl1);
             this.Controls.Add(this.labelGameFile);
             this.Controls.Add(this.menuStrip1);
@@ -132,5 +144,6 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private KenChessBoardView.KenChessUserControl kenChessUserControl1;
+        private System.Windows.Forms.Button buttonCopyFEN;
     }
 }

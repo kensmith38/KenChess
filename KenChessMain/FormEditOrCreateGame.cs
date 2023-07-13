@@ -263,5 +263,11 @@ namespace KenChessMain
             }
             return inputIsValid;
         }
+
+        private void buttonCopyFEN_Click(object sender, EventArgs e)
+        {
+            string currentFEN = kenChessUserControl1.CurrentChessMove.FENPositionAfterChessMove;
+            Clipboard.SetText(currentFEN);
+        }
     }
 }
